@@ -39,9 +39,7 @@ export default function FeaturedDJ() {
         </h2>
       </div>
       
-      <div className="px-6 lg:px-12">
-        <DJCarousel djs={djs} />
-      </div>
+      <DJCarousel djs={djs} />
     </section>
   );
 }

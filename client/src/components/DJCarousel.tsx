@@ -39,7 +39,7 @@ export default function DJCarousel({ djs }: DJCarouselProps) {
 
   return (
     <div className="relative" data-testid="dj-carousel">
-      <div className="relative h-[600px] rounded-lg overflow-hidden">
+      <div className="relative h-[600px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center transition-all duration-700"
           style={{
