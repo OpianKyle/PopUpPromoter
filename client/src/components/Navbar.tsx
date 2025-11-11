@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logo from "@assets/generated_images/Groovy_Gala_neon_logo_8f9579e1.png";
 
 interface NavbarProps {
   onNavigate: (section: string) => void;
@@ -37,10 +38,13 @@ export default function Navbar({ onNavigate }: NavbarProps) {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => onNavigate('hero')}
-            className="text-xl md:text-2xl font-black text-primary tracking-tight heading-glow"
+            className="flex items-center gap-3"
             data-testid="nav-logo"
           >
-            GROOVY GALA
+            <img src={logo} alt="Groovy Gala" className="h-10 md:h-12 w-auto" />
+            <span className="text-xl md:text-2xl font-black text-primary tracking-tight heading-glow hidden sm:inline">
+              GROOVY GALA
+            </span>
           </button>
 
           <div className="hidden md:flex items-center gap-8">
