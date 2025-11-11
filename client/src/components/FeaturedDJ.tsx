@@ -32,12 +32,14 @@ const djs: DJ[] = [
 
 export default function FeaturedDJ() {
   return (
-    <section className="py-20 px-6 bg-card" data-testid="featured-dj">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+    <section className="py-20 bg-card" data-testid="featured-dj">
+      <div className="max-w-6xl mx-auto px-6 mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center">
           <span className="heading-highlight heading-glow">Featured DJs</span>
         </h2>
-        
+      </div>
+      
+      <div className="px-6 lg:px-12">
         <DJCarousel djs={djs} />
       </div>
     </section>
