@@ -49,45 +49,45 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
   };
 
   return (
-    <div className="flex items-center justify-center gap-4 md:gap-8" data-testid="countdown-timer">
+    <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-8" data-testid="countdown-timer">
       <div className="flex flex-col items-center">
-        <div className="text-6xl md:text-8xl font-bold text-primary-foreground" data-testid="countdown-days">
+        <div className="text-4xl sm:text-6xl md:text-8xl font-bold text-primary-foreground" data-testid="countdown-days">
           {formatNumber(timeLeft.days)}
         </div>
-        <div className="text-sm md:text-base font-medium text-primary-foreground/80 mt-2">
+        <div className="text-xs sm:text-sm md:text-base font-medium text-primary-foreground/80 mt-1 md:mt-2">
           D
         </div>
       </div>
       
-      <div className="text-4xl md:text-6xl font-bold text-primary-foreground/60">:</div>
+      <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary-foreground/60">:</div>
       
       <div className="flex flex-col items-center">
-        <div className="text-6xl md:text-8xl font-bold text-primary-foreground" data-testid="countdown-hours">
+        <div className="text-4xl sm:text-6xl md:text-8xl font-bold text-primary-foreground" data-testid="countdown-hours">
           {formatNumber(timeLeft.hours)}
         </div>
-        <div className="text-sm md:text-base font-medium text-primary-foreground/80 mt-2">
+        <div className="text-xs sm:text-sm md:text-base font-medium text-primary-foreground/80 mt-1 md:mt-2">
           H
         </div>
       </div>
       
-      <div className="text-4xl md:text-6xl font-bold text-primary-foreground/60">:</div>
+      <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary-foreground/60">:</div>
       
       <div className="flex flex-col items-center">
-        <div className="text-6xl md:text-8xl font-bold text-primary-foreground" data-testid="countdown-minutes">
+        <div className="text-4xl sm:text-6xl md:text-8xl font-bold text-primary-foreground" data-testid="countdown-minutes">
           {formatNumber(timeLeft.minutes)}
         </div>
-        <div className="text-sm md:text-base font-medium text-primary-foreground/80 mt-2">
+        <div className="text-xs sm:text-sm md:text-base font-medium text-primary-foreground/80 mt-1 md:mt-2">
           M
         </div>
       </div>
       
-      <div className="text-4xl md:text-6xl font-bold text-primary-foreground/60">:</div>
+      <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary-foreground/60">:</div>
       
       <div className="flex flex-col items-center">
-        <div className="text-6xl md:text-8xl font-bold text-primary-foreground" data-testid="countdown-seconds">
+        <div className="text-4xl sm:text-6xl md:text-8xl font-bold text-primary-foreground" data-testid="countdown-seconds">
           {formatNumber(timeLeft.seconds)}
         </div>
-        <div className="text-sm md:text-base font-medium text-primary-foreground/80 mt-2">
+        <div className="text-xs sm:text-sm md:text-base font-medium text-primary-foreground/80 mt-1 md:mt-2">
           S
         </div>
       </div>

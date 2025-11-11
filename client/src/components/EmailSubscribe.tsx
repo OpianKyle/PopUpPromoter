@@ -58,7 +58,7 @@ export default function EmailSubscribe({ onSubscribe }: EmailSubscribeProps) {
 
   return (
     <section 
-      className="relative py-32 px-6 overflow-hidden"
+      className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(${crowdPhoto})`,
         backgroundSize: 'cover',
@@ -69,28 +69,28 @@ export default function EmailSubscribe({ onSubscribe }: EmailSubscribeProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/30 to-primary/50" />
       
       <div className="relative z-10 max-w-2xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary-foreground mb-3 sm:mb-4">
           <span className="heading-glow">Be First in Line</span>
         </h2>
-        <p className="text-xl text-primary-foreground/80 mb-12">
+        <p className="text-lg sm:text-xl text-primary-foreground/80 mb-8 sm:mb-12">
           Get notified when tickets drop
         </p>
         
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <Input
             type="email"
             placeholder="your@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="h-14 text-lg flex-1 bg-white/10 backdrop-blur-md border-white/20 text-primary-foreground placeholder:text-primary-foreground/50"
+            className="h-12 sm:h-14 text-base sm:text-lg flex-1 bg-white/10 backdrop-blur-md border-white/20 text-primary-foreground placeholder:text-primary-foreground/50"
             data-testid="input-email"
           />
           <Button
             type="submit"
             size="lg"
             disabled={isSubmitting}
-            className="h-14 px-8 bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-bold"
+            className="h-12 sm:h-14 px-6 sm:px-8 bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-bold"
             data-testid="button-notify-me"
           >
             {isSubmitting ? "Subscribing..." : "Notify Me"}
@@ -101,7 +101,7 @@ export default function EmailSubscribe({ onSubscribe }: EmailSubscribeProps) {
           <p className="mt-4 text-red-300" data-testid="error-message">{error}</p>
         )}
         
-        <p className="mt-6 text-sm text-primary-foreground/60">
+        <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-primary-foreground/60">
           We'll only email you about ticket releases
         </p>
       </div>
