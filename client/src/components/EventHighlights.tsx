@@ -39,7 +39,7 @@ export default function EventHighlights() {
     <section className="py-20 px-6 bg-background" data-testid="event-highlights">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          Event Highlights
+          <span className="heading-highlight heading-glow">Event Highlights</span>
         </h2>
         <p className="text-center text-muted-foreground text-lg mb-16 max-w-2xl mx-auto">
           An unforgettable night featuring everything you need for the perfect party experience

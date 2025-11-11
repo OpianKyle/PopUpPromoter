@@ -46,7 +46,7 @@ export default function EmailSubscribe({ onSubscribe }: EmailSubscribeProps) {
         <div className="relative z-10 max-w-2xl mx-auto text-center">
           <CheckCircle2 className="w-20 h-20 text-green-400 mx-auto mb-6" />
           <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-            You're on the List!
+            <span className="heading-glow">You're on the List!</span>
           </h2>
           <p className="text-xl text-primary-foreground/80">
             We'll notify you the moment tickets go live. Get ready to groove!
@@ -70,7 +70,7 @@ export default function EmailSubscribe({ onSubscribe }: EmailSubscribeProps) {
       
       <div className="relative z-10 max-w-2xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-          Be First in Line
+          <span className="heading-glow">Be First in Line</span>
         </h2>
         <p className="text-xl text-primary-foreground/80 mb-12">
           Get notified when tickets drop

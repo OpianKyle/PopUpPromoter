@@ -29,7 +29,7 @@ export default function EventDetails() {
     <section className="py-20 px-6 bg-background" data-testid="event-details">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-          Event Details
+          <span className="heading-highlight heading-glow">Event Details</span>
         </h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
