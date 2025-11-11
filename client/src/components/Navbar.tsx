@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "@assets/generated_images/Groovy_Gala_transparent_logo_1657a2c3.png";
+import logo from "@assets/Groovy_Gala_neon_logo_8f9579e1_1762851125994.png";
 
 interface NavbarProps {
   onNavigate: (section: string) => void;
