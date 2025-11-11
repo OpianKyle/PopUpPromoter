@@ -37,7 +37,7 @@ export default function Navbar({ onNavigate }: NavbarProps) {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => onNavigate('hero')}
-            className="text-xl md:text-2xl font-black text-primary tracking-tight"
+            className="text-xl md:text-2xl font-black text-primary tracking-tight heading-glow"
             data-testid="nav-logo"
           >
             GROOVY GALA

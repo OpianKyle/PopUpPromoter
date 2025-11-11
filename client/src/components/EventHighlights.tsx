@@ -1,5 +1,4 @@
 import { Music, Wine, MapPin, Users, Radio, Sparkles } from "lucide-react";
-import { Card } from "@/components/ui/card";
 
 const highlights = [
   {
@@ -45,21 +44,19 @@ export default function EventHighlights() {
           An unforgettable night featuring everything you need for the perfect party experience
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {highlights.map((highlight, index) => (
-            <Card 
+            <div 
               key={index} 
-              className="p-8 hover-elevate active-elevate-2 transition-all duration-200"
+              className="flex flex-col items-center text-center p-8 hover-elevate active-elevate-2 transition-all duration-200"
               data-testid={`highlight-${index}`}
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <highlight.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{highlight.title}</h3>
-                <p className="text-muted-foreground">{highlight.description}</p>
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <highlight.icon className="w-8 h-8 text-primary" />
               </div>
-            </Card>
+              <h3 className="text-xl font-bold mb-3 heading-glow">{highlight.title}</h3>
+              <p className="text-muted-foreground">{highlight.description}</p>
+            </div>
           ))}
         </div>
       </div>

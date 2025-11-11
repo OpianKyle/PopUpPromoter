@@ -22,19 +22,24 @@ export default function HeroSection({ targetDate, onSubscribeClick }: HeroSectio
       
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
         <div className="mb-8">
-          <p className="text-primary-foreground/90 text-lg md:text-xl font-bold tracking-wider mb-4">
+          <p className="text-primary-foreground text-base md:text-lg font-bold tracking-[0.3em] mb-2">
             FRIDAY
           </p>
-          <p className="text-primary-foreground/90 text-2xl md:text-3xl font-bold tracking-wider">
-            5<sup>TH</sup> DECEMBER
+          <p className="text-primary-foreground text-lg md:text-xl font-bold tracking-[0.2em]">
+            5<sup className="text-sm">TH</sup> DECEMBER
           </p>
         </div>
         
-        <div className="mb-8">
-          <p className="text-primary-foreground/70 text-sm md:text-base tracking-widest mb-4">
-            —GROOVY GALA—
-          </p>
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-primary-foreground tracking-tight leading-none">
+        <div className="my-12">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px bg-primary-foreground w-12 md:w-24"></div>
+            <p className="text-primary-foreground text-sm md:text-base font-bold tracking-[0.3em]">
+              GROOVY GALA
+            </p>
+            <div className="h-px bg-primary-foreground w-12 md:w-24"></div>
+          </div>
+          
+          <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[12rem] font-black text-primary-foreground tracking-tighter leading-[0.85] mb-12">
             HOUSE
             <br />
             PARTY
@@ -45,27 +50,23 @@ export default function HeroSection({ targetDate, onSubscribeClick }: HeroSectio
           <CountdownTimer targetDate={targetDate} />
         </div>
         
-        <p className="text-primary-foreground/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-          Prepare yourself for Cape Town's biggest house party
-        </p>
+        <div className="mt-16 mb-8 text-primary-foreground">
+          <p className="text-sm md:text-base tracking-wider mb-2">GET YOUR TICKET ONLINE AT</p>
+          <p className="text-xl md:text-2xl font-bold tracking-wide">GROOVYGALA.CRD.CO</p>
+        </div>
+        
+        <div className="mb-12 text-primary-foreground/90">
+          <p className="text-sm md:text-base tracking-widest">LOCATION TBA</p>
+        </div>
         
         <Button
           size="lg"
-          className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-12 py-6 rounded-full font-bold backdrop-blur-md"
+          className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-base md:text-lg px-12 py-6 rounded-full font-bold backdrop-blur-md"
           onClick={onSubscribeClick}
           data-testid="button-get-early-access"
         >
           Get Early Access
         </Button>
-        
-        <div className="mt-12 text-primary-foreground/70">
-          <p className="text-sm">Get your ticket online at</p>
-          <p className="text-lg font-bold mt-1">groovygala.crd.co</p>
-        </div>
-        
-        <div className="mt-6 text-primary-foreground/60">
-          <p className="text-sm">Location TBA</p>
-        </div>
       </div>
     </section>
   );

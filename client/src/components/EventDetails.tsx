@@ -1,5 +1,4 @@
 import { Clock, MapPin, Users, Shirt } from "lucide-react";
-import { Card } from "@/components/ui/card";
 
 const details = [
   {
@@ -32,9 +31,9 @@ export default function EventDetails() {
           <span className="heading-highlight heading-glow">Event Details</span>
         </h2>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {details.map((detail, index) => (
-            <Card 
+            <div 
               key={index} 
               className="p-8 text-center hover-elevate active-elevate-2 transition-all duration-200"
               data-testid={`detail-${index}`}
@@ -43,10 +42,10 @@ export default function EventDetails() {
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <detail.icon className="w-8 h-8 text-primary" />
                 </div>
-                <p className="text-sm text-muted-foreground mb-2">{detail.label}</p>
-                <p className="text-2xl font-bold">{detail.value}</p>
+                <p className="text-sm text-muted-foreground mb-2 tracking-wider uppercase">{detail.label}</p>
+                <p className="text-2xl font-bold heading-glow">{detail.value}</p>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
