@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useMutation } from "@tanstack/react-query";
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import EventHighlights from "@/components/EventHighlights";
 import FeaturedDJ from "@/components/FeaturedDJ";
@@ -11,6 +12,10 @@ import { apiRequest } from "@/lib/queryClient";
 
 export default function Home() {
   const { toast } = useToast();
+  const heroRef = useRef<HTMLDivElement>(null);
+  const highlightsRef = useRef<HTMLDivElement>(null);
+  const djsRef = useRef<HTMLDivElement>(null);
+  const detailsRef = useRef<HTMLDivElement>(null);
   const subscribeRef = useRef<HTMLDivElement>(null);
   const targetDate = new Date('2025-12-05T18:00:00');
 
@@ -29,6 +34,18 @@ export default function Home() {
     },
   });
 
+  const handleNavigate = (section: string) => {
+    const refs: Record<string, React.RefObject<HTMLDivElement>> = {
+      hero: heroRef,
+      highlights: highlightsRef,
+      djs: djsRef,
+      details: detailsRef,
+      tickets: subscribeRef,
+    };
+    
+    refs[section]?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   const handleSubscribeClick = () => {
     subscribeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
@@ -39,10 +56,19 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <HeroSection targetDate={targetDate} onSubscribeClick={handleSubscribeClick} />
-      <EventHighlights />
-      <FeaturedDJ />
-      <EventDetails />
+      <Navbar onNavigate={handleNavigate} />
+      <div ref={heroRef}>
+        <HeroSection targetDate={targetDate} onSubscribeClick={handleSubscribeClick} />
+      </div>
+      <div ref={highlightsRef}>
+        <EventHighlights />
+      </div>
+      <div ref={djsRef}>
+        <FeaturedDJ />
+      </div>
+      <div ref={detailsRef}>
+        <EventDetails />
+      </div>
       <div ref={subscribeRef}>
         <EmailSubscribe onSubscribe={handleSubscribe} />
       </div>
